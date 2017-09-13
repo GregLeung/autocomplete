@@ -1,0 +1,11 @@
+<form class="example-form">
+  <md-form-field class="example-full-width">
+    <input mdInput placeholder="address" aria-label="address" [mdAutocomplete]="auto" [formControl]="addressCtrl">
+    <md-autocomplete #auto="mdAutocomplete">
+      <md-option *ngFor="let address of filteredAddresses" [value]="address.text">
+        {{address.text}}
+      </md-option>
+    </md-autocomplete>
+  </md-form-field>
+  <br />
+</form>
